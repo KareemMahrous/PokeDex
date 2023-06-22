@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "258444701143",
+    "project_id": "pokemon-c4210",
+    "storage_bucket": "pokemon-c4210.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258444701143:android:e5d53976fb1c58bfee6f92",
+        "android_client_info": {
+          "package_name": "com.example.pokemon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258444701143-hclmaq7pe2954i1fqsdgndpb40g6qauf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCU-cV9YJTDdiMJmtwRT76PAhjVrafblME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "258444701143-hclmaq7pe2954i1fqsdgndpb40g6qauf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
