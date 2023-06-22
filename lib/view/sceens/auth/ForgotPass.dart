@@ -1,12 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 import 'package:pokemon/constants/navigation_service.dart';
-import 'package:pokemon/viewmodel/cubit/Login/login_cubit.dart';
-import 'package:flutter_form_builder/flutter_form_builder.dart';
 
 import '../../../constants/color_manager.dart';
 import '../../../constants/fonts.dart';
@@ -16,7 +12,7 @@ import '../../components/custom_text_form_field.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
   ForgetPasswordScreen({Key? key}) : super(key: key);
-  static final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  static final GlobalKey<FormState> _formKeyForget = GlobalKey<FormState>();
   TextEditingController emailController = TextEditingController();
 
   @override
@@ -35,7 +31,7 @@ class ForgetPasswordScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(25),
           child: Form(
-              key: _formKey,
+              key: _formKeyForget,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -80,7 +76,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                         String email = emailController.text;
                         forgetPass(email, context);
                         print("user input is valid $emailController");
-                        if (_formKey.currentState!.validate()) {}
+                        if (_formKeyForget.currentState!.validate()) {}
                       },
                     ),
                   ),

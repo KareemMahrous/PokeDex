@@ -31,8 +31,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await CacheHelper.init();
   await DioHelper.init();
-  final appDocumentDir = await path.getApplicationDocumentsDirectory();
-  Hive.init(appDocumentDir.path);
+  // final appDocumentDir = await path.getApplicationDocumentsDirectory();
+  // Hive.init(appDocumentDir.path);
   await Hive.initFlutter();
   await Hive.openBox("fav");
   await Firebase.initializeApp(

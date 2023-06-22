@@ -14,7 +14,7 @@ import '../../components/custom_text_form_field.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
-  static final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+  static final GlobalKey<FormState> formkeyLogin = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(25),
                   child: Form(
-                    key: _formkey,
+                    key: formkeyLogin,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -154,7 +154,7 @@ class LoginScreen extends StatelessWidget {
                               String email = emailController.text;
                               String password = passwordController.text;
                               print("user input is valid $emailController");
-                              if (_formkey.currentState!.validate()) {
+                              if (formkeyLogin.currentState!.validate()) {
                                 myCubit.login(email, password);
                               }
                             },

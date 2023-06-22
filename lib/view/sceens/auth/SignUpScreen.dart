@@ -55,7 +55,6 @@ class SignUpScreen extends StatelessWidget {
                             height: 50.h,
                           ),
                           CustomTextField(
-                            key: UniqueKey(),
                             controller: myCubit.emailController,
                             hintText: "email",
                             keyboardType: TextInputType.emailAddress,
@@ -70,8 +69,6 @@ class SignUpScreen extends StatelessWidget {
                             height: 20.h,
                           ),
                           CustomTextField(
-                              key: UniqueKey(),
-
                               controller: myCubit.passwordController,
                               hintText: "Password",
                               keyboardType: TextInputType.text,
